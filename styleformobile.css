@@ -18,7 +18,7 @@
 }
 
 .row:nth-child(1){
-    height: 40%;
+    height: 40vh;
     background: #136a8a;
     background: linear-gradient(to right, #151516ef, #12141dde);
     flex-direction: column;
@@ -104,7 +104,7 @@
 }
 
 .row:nth-child(2){
-    height: 60%;
+    height: 60vh;
     background-color: rgb(201, 212, 201);
     flex-direction: column;
     position: relative;
