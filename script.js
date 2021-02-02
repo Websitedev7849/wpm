@@ -90,6 +90,7 @@ app.controller('myctrl' , ['$scope' , 'ser' , '$interval', function ($scope, ser
 	$scope.tf = true;
 	$scope.rightCount = 0;
 	$scope.wrongCount = 0;
+	
 	var i = 1; // array traverser
 	var k = 0; // array slicer
 	var z = 0; // used in $scope.check function
