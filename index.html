@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body ng-app="myapp" ng-controller="myctrl">
+        <!-- first row is where the text is shown  -->
+        <div class="row center">
+                <h3>count your words per minute</h3>
+                <div class="line"></div>
+
+                <h4 class="center para">
+					<span ng-repeat = "x in words track by $index" class = "words">{{x}}</span>
+				</h4>
+
+                
+                <div class="timer center">
+                    <span class="center" id="time">{{time}}</span>
+                    <div class="center timer-info" ng-hide="hidedesc">TIMER WILL START WHEN YOU START TYPING</div>
+                </div>
+                
+        </div>
+
+        <!-- second row is where we will get our input -->
+        <div class="row center">
+
+            <h4 ng-hide="hidedesc">Start typing the above line in the box below.</h4>
+            <input type="text" placeholder="write here..." ng-model="txt"  ng-change = "check(txt)" ng-keydown = "keydwn($event)"/>
+			
+        </div>
+
+        <div class="center alert">
+            <div class=" center inner-alert">
+                <h1 class="timeup">Times up!!</h1>
+                
+                    <p class="center alerth">Correct Words : </p>
+                    
+                     <p class="count">{{rightCount}}</p>
+                   
+                    <p class="alerth">Incorrect Words :  </p>
+
+                    <p class="count">{{wrongCount}}</p>
+                    
+                <p class="wpm">Total words per minute : </p>
+
+                <p class="count wpmNumber">{{rightCount - wrongCount}} WPM</p>
+                <a href="#" class="restart" onclick="window.location.reload()"> Restart </a>
+            </div>
+        </div>
+        
+        
+     <script src="angular.js"></script>
+     <script src="script.js"></script>   
+    </body>
+</html>
