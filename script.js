@@ -8,6 +8,7 @@ if (window.screen.availWidth < 400) {
 	var heightBefore = window.innerHeight;
 	var rows = document.getElementsByClassName('row');
 	rows[0].style.height = heightBefore * 0.40;
+	document.getElementsByClassName('inner-alert')[0].style.height = heightBefore * 0.40;
 }
 else{
 	document.getElementsByTagName('link')[0].href = "style.css"; 
