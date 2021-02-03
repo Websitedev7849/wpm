@@ -95,7 +95,8 @@ app.controller('myctrl' , ['$scope' , 'ser' , '$interval', function ($scope, ser
 	$scope.hidedesc = false;
 	$scope.tf = true;
 	$scope.rightCount = 0;
-	$scope.wrongCount = 0;
+	$scope.wrongCount = 0; $scope.ecode;
+	
 	var i = 1; // array traverser
 	var k = 0; // array slicer
 	var z = 0; // used in $scope.check function
@@ -194,6 +195,7 @@ app.controller('myctrl' , ['$scope' , 'ser' , '$interval', function ($scope, ser
 
 	//this is the function which keeps eye on our input
 	$scope.keydwn = function (event) {
+		$scope.ecode = event.keyCode;
 		firstTime++;
 		if (firstTime == 1) {
 			myInterval();
